@@ -23,7 +23,7 @@ public class TestBase {
 		
 		String browser_from_system = System.getProperty("browserName"); //from system or command line null
 		
-		String URL_from_system = prop.getProperty("Url"); 
+		String URL_from_system = System.getProperty("Url"); 
 		
 		
 		url = URL_from_system!=null ? URL_from_system : url;
