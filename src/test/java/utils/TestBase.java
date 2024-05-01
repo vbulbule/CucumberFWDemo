@@ -17,11 +17,16 @@ public class TestBase {
 		FileInputStream fis = new FileInputStream("./src/test/resources/global.properties");
 		Properties prop = new Properties();
 		prop.load(fis);
-		String url = prop.getProperty("QAUrl");
+		String url = prop.getProperty("Url");
 		
 		String browser = prop.getProperty("browserName"); // from properties file
 		
 		String browser_from_system = System.getProperty("browserName"); //from system or command line null
+		
+		String URL_from_system = prop.getProperty("Url"); 
+		
+		
+		url = URL_from_system!=null ? URL_from_system : url;
 		
 		browser = browser_from_system !=null ? browser_from_system  : browser ; 
 			
