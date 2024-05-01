@@ -7,6 +7,7 @@ public class PageObjectManager {
 	public GreenKartPage greenKartPage;
 	public OffersPage offersPage;
 	public WebDriver driver;
+	public CheckoutPage checkoutPage;
 	
 	
 	public PageObjectManager (WebDriver driver) {
@@ -23,6 +24,11 @@ public class PageObjectManager {
 	public OffersPage getOffersPage() {
 		offersPage = new OffersPage(driver);
 		return offersPage;
+	}
+	public CheckoutPage getCheckoutPage()
+	{
+		checkoutPage = new CheckoutPage(driver);
+		return checkoutPage;
 	}
 	
 	
